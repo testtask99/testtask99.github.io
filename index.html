@@ -2,16 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 </head>
-<body scroll=no>
-  <div id="map"></div>
-  <div style="position: fixed; left: 100px; height: 180px;">
-  <p style="background: #FFFFFF">adfadsfaf</p>
-  </div>
-  <script src="scripts.js"></script>
+<body>
+  <div data-role="content" id="map"></div>
+
+ <div class="ui-grid-c uiGridTop" style="position: fixed;">
+   <div class="ui-block-a">
+     <select name="slider2" id="slider2" data-role="slider">
+     <option value="off">Off</option>
+        <option value="on">On</option>
+     </select>
+   </div>
+   <div class="ui-block-b">
+    <select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+    <option value="off">No</option>
+    <option value="on" selected="">Yes</option>
+</select> 
+   
+   </div>
+   <div class="ui-block-c"><select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+        <option value="off">No</option>
+        <option value="on" selected="">Yes</option>
+   </select></div>
+ </div>
+ 
+ <div class="ui-grid-d uiGrid" style="position: fixed;">
+   <div class="ui-block-b"></div>
+   <div class="ui-block-a">
+   <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+    <option value="standard">Тип заведения</option>
+    <option value="rest">Ресторан</option>
+    <option value="mall">Магазин</option>
+    <option value="fast">Закусочная</option>
+    </select> 
+    </div> 
+ </div>
+
+ <div class="ui-grid-c uiGrid2" style="position: fixed;">
+   <div class="ui-block-a">
+    <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+    <option value="standard">Обслуживание</option>
+    <option value="cust">Стандарт</option>
+    <option value="exp">Экспресс</option>
+    <option value="deliv">С доставкой</option>
+    </select> 
+   </div>
+   <div class="ui-block-b">
+    <select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+    <option value="standard">Кухня</option>
+    <option value="chin">Китайская<>/option>
+    <option value="core">Корейская</option>
+    <option value="viet">Вьетнамская</option>
+    </select> 
+   
+   </div>
+      <div class="ui-block-c" style="width: 45%">
+      <form>
+      <div data-role="rangeslider" data-mini="true">
+        <input type="range" name="range-2a" id="range-2a" min="0" max="100" value="40">
+        <input type="range" name="range-2b" id="range-2b" min="0" max="100" value="80">
+    </div>
+    </form>  
+      </div>
+ </div>
+ 
+ <div class="ui-grid-e uiGridVertical" style="position: fixed;">
+      <div class="ui-block-a">
+        <input type="search" name="search" id="search-basic" value="" />
+      </div>
+ </div>
+  
+  <script src="scripts.js" defer></script>
 </body>
 </html>
